@@ -115,7 +115,7 @@ hr {
 .course-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .fa-star {
@@ -138,4 +138,45 @@ hr {
     padding-left: 5.43px;
     padding-right: 5.6px;
     padding-bottom: 5.34px;
+}
+
+/* media queries */
+/* mobail device */
+@media only screen and (max-width: 688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+}
+
+/* tab device */
+@media only screen and (min-width: 689px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* .player,
+    .blog {
+        flex-direction: column;
+    } */
 }
